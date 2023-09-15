@@ -1,0 +1,96 @@
+/* Reset básico */
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section {
+    padding: 2rem;
+}
+
+.container-grafico {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;  /* cor de fundo branca para o gráfico */
+    border-radius: 8px;         /* bordas arredondadas */
+    padding: 20px;              /* espaço interno ao redor das barras */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* uma leve sombra para dar profundidade */
+}
+
+.barra {
+    background-color: #ddd; /* cor de fundo para visualizar a barra completa */
+    height: 30px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.barra-fill {
+    display: block;
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%; /* você pode definir esse valor de acordo com a porcentagem do respectivo nome */
+    transition: width 1s;
+}
+
+.barra::before {
+    content: attr(data-name);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.barra::after {
+    content: attr(data-value);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.vermelho {
+    background-color: #ff0000;
+}
+
+.laranja {
+    background-color: #ff7f00;
+}
+
+.amarelo {
+    background-color: #ffff00;
+}
+
+.verde {
+    background-color: #4CAF50;
+}
+
+.barra::before {
+    font-weight: bold;
+}
+
+/* Estilos para o player do YouTube */
+#player {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#player iframe {
+    max-width: 100%;  
+}
