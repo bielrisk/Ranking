@@ -125,4 +125,26 @@ section {
     60% {
         transform: translateY(-5px);
     }
+    
+}
+
+.destaque-titulo {
+    text-align: center;
+    font-size: 2rem; /* Aumenta o tamanho da fonte */
+    margin-top: 30px; /* Espaçamento acima do título */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    color: #e74c3c; /* Cor do título, escolhi um vermelho para destaque */
+    animation: pulo 1s infinite; /* Aplica a animação */
+}
+
+@keyframes pulo {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
