@@ -94,3 +94,35 @@ section {
 #player iframe {
     max-width: 100%;  
 }
+.aviso-som {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffa726; /* cor laranja para destaque */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.texto {
+    font-size: 1.2rem; /* tamanho um pouco maior do que o padrão */
+    font-weight: bold; /* negrito */
+    margin-right: 20px;
+}
+
+.seta {
+    font-size: 2rem; /* ícone da seta maior */
+    animation: bounce 1s infinite; /* animação para chamar atenção */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
